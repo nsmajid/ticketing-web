@@ -2,7 +2,9 @@ FROM node:22-alpine
 
 WORKDIR /app
 
-RUN apk add --no-cache bash
+RUN apk add --no-cache \
+    bash \
+    git
 
 RUN corepack enable \
  && corepack prepare pnpm@11.10.0 --activate
