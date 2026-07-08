@@ -6,9 +6,7 @@
     "allowArbitraryExtensions": true,
     // "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ]
+      "@/*": ["./src/*"]
     },
 
     /* Linting */
@@ -17,7 +15,5 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
- 
-
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]
 }

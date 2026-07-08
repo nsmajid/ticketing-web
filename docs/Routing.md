@@ -526,6 +526,7 @@ JSON
 ↓
 
 Ticket Table
+
 ```
 
 ---
@@ -537,12 +538,15 @@ Misalnya.
 User membuka.
 
 ```
+
 /tickets
+
 ```
 
 Flow.
 
 ```
+
 Browser
 
 ↓
@@ -584,6 +588,7 @@ Pinia (optional)
 ↓
 
 Table
+
 ```
 
 ---
@@ -591,12 +596,15 @@ Table
 Kemudian user memilih.
 
 ```
+
 Ticket #123
+
 ```
 
 Flow.
 
 ```
+
 Browser
 
 ↓
@@ -626,6 +634,7 @@ JSON
 ↓
 
 Render
+
 ```
 
 ---
@@ -635,6 +644,7 @@ Render
 ## Membuka Ticket
 
 ```
+
 Browser
 
 ↓
@@ -652,6 +662,7 @@ GET /tickets/123
 ↓
 
 JSON
+
 ```
 
 ↓
@@ -659,6 +670,7 @@ JSON
 Render.
 
 ```
+
 Description
 
 Timeline
@@ -666,6 +678,7 @@ Timeline
 Comment
 
 Attachment
+
 ```
 
 ---
@@ -675,6 +688,7 @@ Attachment
 User melakukan drag file.
 
 ```
+
 Image
 
 ↓
@@ -700,12 +714,15 @@ Temporary
 Return
 
 attachment://ULID
+
 ```
 
 Editor otomatis berubah.
 
 ```
+
 ![Image](attachment://ULID)
+
 ```
 
 Belum ada Comment.
@@ -719,11 +736,13 @@ Belum ada Attachment Usage.
 User mengetik.
 
 ```
+
 Halo
 
 Silakan cek.
 
 ![image](attachment://ULID)
+
 ```
 
 Masih berada pada Frontend.
@@ -737,7 +756,9 @@ Belum ada relasi database.
 User klik.
 
 ```
+
 Submit
+
 ```
 
 ↓
@@ -745,15 +766,19 @@ Submit
 POST.
 
 ```
+
 /tickets/123/comments
+
 ```
 
 Body.
 
 ```
+
 content
 
 attachment://ULID
+
 ```
 
 ↓
@@ -761,6 +786,7 @@ attachment://ULID
 Laravel.
 
 ```
+
 Attachment Parser
 
 ↓
@@ -782,6 +808,7 @@ Comment dibuat
 ↓
 
 Timeline dibuat
+
 ```
 
 ↓
@@ -789,7 +816,9 @@ Timeline dibuat
 Response.
 
 ```
+
 CommentResource
+
 ```
 
 ↓
@@ -797,6 +826,7 @@ CommentResource
 Vue.
 
 ```
+
 Comment List
 
 ↓
@@ -806,6 +836,7 @@ Reactive Update
 ↓
 
 UI berubah
+
 ```
 
 Frontend tidak pernah memanggil endpoint Attachment lagi.
@@ -838,6 +869,7 @@ Vue Router **bukan Controller**.
 Alur aplikasi mengikuti pola berikut.
 
 ```
+
 Route
 
 ↓
@@ -871,6 +903,8 @@ Reactive Data
 ↓
 
 UI
+
 ```
 
 Semua komunikasi Backend dilakukan setelah Page ditampilkan, bukan pada Router.
+```

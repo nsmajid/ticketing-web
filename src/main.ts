@@ -6,7 +6,4 @@ import { pinia } from '@/stores'
 
 import './assets/css/app.css'
 
-createApp(App)
-    .use(pinia)
-    .use(router)
-    .mount('#app')
+createApp(App).use(pinia).use(router).mount('#app')

@@ -1,15 +1,9 @@
-import type {
-  AxiosRequestConfig,
-  AxiosResponse,
-} from 'axios'
+import type { AxiosRequestConfig, AxiosResponse } from 'axios'
 
 import { http } from '@/services/http'
 
 export abstract class BaseService {
-  protected get<T>(
-    url: string,
-    config?: AxiosRequestConfig,
-  ): Promise<AxiosResponse<T>> {
+  protected get<T>(url: string, config?: AxiosRequestConfig): Promise<AxiosResponse<T>> {
     return http.get<T>(url, config)
   }
 
@@ -37,10 +31,7 @@ export abstract class BaseService {
     return http.patch<T>(url, data, config)
   }
 
-  protected delete<T>(
-    url: string,
-    config?: AxiosRequestConfig,
-  ): Promise<AxiosResponse<T>> {
+  protected delete<T>(url: string, config?: AxiosRequestConfig): Promise<AxiosResponse<T>> {
     return http.delete<T>(url, config)
   }
 }

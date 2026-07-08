@@ -149,12 +149,12 @@ White
 
 Gunakan warna hanya untuk menyampaikan arti.
 
-| Status | Warna |
-|---------|--------|
+| Status  | Warna |
+| ------- | ----- |
 | Success | Green |
 | Warning | Amber |
-| Danger | Red |
-| Info | Blue |
+| Danger  | Red   |
+| Info    | Blue  |
 | Neutral | Slate |
 
 ---
@@ -174,13 +174,13 @@ Inter
 Hierarchy.
 
 | Element | Size |
-|----------|------|
-| H1 | 30px |
-| H2 | 24px |
-| H3 | 20px |
-| H4 | 18px |
-| Body | 14px |
-| Small | 12px |
+| ------- | ---- |
+| H1      | 30px |
+| H2      | 24px |
+| H3      | 20px |
+| H4      | 18px |
+| Body    | 14px |
+| Small   | 12px |
 
 ---
 

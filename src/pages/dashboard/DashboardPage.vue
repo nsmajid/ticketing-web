@@ -11,7 +11,6 @@ import { useAppStore } from '@/stores/app'
 const appStore = useAppStore()
 
 const { appName } = storeToRefs(appStore)
-
 </script>
 
 <template>
@@ -20,8 +19,6 @@ const { appName } = storeToRefs(appStore)
       {{ appName }}
     </h1>
 
-    <p class="text-muted-foreground">
-      Dashboard
-    </p>
+    <p class="text-muted-foreground">Dashboard</p>
   </div>
 </template>

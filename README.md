@@ -23,12 +23,12 @@ Further documentation will be added during the implementation milestones.
 
 ## Branch Strategy
 
-| Branch | Purpose |
-|---------|---------|
-| main | Production |
-| staging | Development |
+| Branch    | Purpose             |
+| --------- | ------------------- |
+| main      | Production          |
+| staging   | Development         |
 | feature/* | Feature Development |
-| hotfix/* | Hotfix |
+| hotfix/*  | Hotfix              |
 | release/* | Release Preparation |
 
 ## Backend Repository
