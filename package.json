@@ -46,5 +46,17 @@
     "vite": "^8.1.1",
     "vue-eslint-parser": "^10.4.1",
     "vue-tsc": "^3.3.5"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ],
+    "*.{css,scss}": [
+      "prettier --write"
+    ]
   }
 }
