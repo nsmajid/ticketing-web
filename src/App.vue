@@ -1,47 +1,64 @@
 <script setup lang="ts">
-import { ref } from "vue";
-
-import { Button } from "@/components/ui/button";
-
 import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 
-const open = ref(false);
+import { Badge } from "@/components/ui/badge";
+
+const users = [
+  {
+    id: 1,
+    name: "Administrator",
+    role: "Super Admin",
+    status: "Active",
+  },
+  {
+    id: 2,
+    name: "John Doe",
+    role: "Developer",
+    status: "Active",
+  },
+  {
+    id: 3,
+    name: "Jane Smith",
+    role: "Support",
+    status: "Inactive",
+  },
+];
 </script>
 
 <template>
-  <div class="min-h-screen flex items-center justify-center">
-    <Dialog v-model:open="open">
-      <DialogTrigger as-child>
-        <Button>
-          Open Dialog
-        </Button>
-      </DialogTrigger>
+  <div class="p-10">
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHead>ID</TableHead>
+          <TableHead>Name</TableHead>
+          <TableHead>Role</TableHead>
+          <TableHead>Status</TableHead>
+        </TableRow>
+      </TableHeader>
 
-      <DialogContent>
-        <DialogHeader>
-          <DialogTitle>
-            Ticketing App
-          </DialogTitle>
-
-          <DialogDescription>
-            Dialog berhasil di-render.
-          </DialogDescription>
-        </DialogHeader>
-
-        <DialogFooter>
-          <Button @click="open = false">
-            Close
-          </Button>
-        </DialogFooter>
-      </DialogContent>
-    </Dialog>
+      <TableBody>
+        <TableRow
+          v-for="user in users"
+          :key="user.id"
+        >
+          <TableCell>{{ user.id }}</TableCell>
+          <TableCell>{{ user.name }}</TableCell>
+          <TableCell>{{ user.role }}</TableCell>
+          <TableCell>
+            <Badge>
+              {{ user.status }}
+            </Badge>
+          </TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 </template>
