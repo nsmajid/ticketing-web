@@ -1,64 +1,40 @@
 <script setup lang="ts">
 import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
-
-import { Badge } from "@/components/ui/badge";
-
-const users = [
-  {
-    id: 1,
-    name: "Administrator",
-    role: "Super Admin",
-    status: "Active",
-  },
-  {
-    id: 2,
-    name: "John Doe",
-    role: "Developer",
-    status: "Active",
-  },
-  {
-    id: 3,
-    name: "Jane Smith",
-    role: "Support",
-    status: "Inactive",
-  },
-];
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/components/ui/tabs";
 </script>
 
 <template>
-  <div class="p-10">
-    <Table>
-      <TableHeader>
-        <TableRow>
-          <TableHead>ID</TableHead>
-          <TableHead>Name</TableHead>
-          <TableHead>Role</TableHead>
-          <TableHead>Status</TableHead>
-        </TableRow>
-      </TableHeader>
+  <div class="p-8">
+    <Tabs default-value="detail">
+      <TabsList>
+        <TabsTrigger value="detail">
+          Detail
+        </TabsTrigger>
 
-      <TableBody>
-        <TableRow
-          v-for="user in users"
-          :key="user.id"
-        >
-          <TableCell>{{ user.id }}</TableCell>
-          <TableCell>{{ user.name }}</TableCell>
-          <TableCell>{{ user.role }}</TableCell>
-          <TableCell>
-            <Badge>
-              {{ user.status }}
-            </Badge>
-          </TableCell>
-        </TableRow>
-      </TableBody>
-    </Table>
+        <TabsTrigger value="comment">
+          Comment
+        </TabsTrigger>
+
+        <TabsTrigger value="history">
+          History
+        </TabsTrigger>
+      </TabsList>
+
+      <TabsContent value="detail">
+        Ticket Detail Content
+      </TabsContent>
+
+      <TabsContent value="comment">
+        Ticket Comment Content
+      </TabsContent>
+
+      <TabsContent value="history">
+        Ticket History Content
+      </TabsContent>
+    </Tabs>
   </div>
 </template>
