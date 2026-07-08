@@ -1,35 +1,47 @@
 <script setup lang="ts">
+import { ref } from "vue";
+
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+
+const open = ref(false);
 </script>
 
 <template>
-  <div class="min-h-screen bg-muted flex items-center justify-center p-8">
-    <Card class="w-full max-w-md">
-      <CardHeader>
-        <CardTitle>Ticketing App</CardTitle>
-      </CardHeader>
-
-      <CardContent class="space-y-4">
-        <div>
-          <Label>Email</Label>
-          <Input placeholder="email@example.com" />
-        </div>
-
-        <div>
-          <Label>Password</Label>
-          <Input
-            type="password"
-            placeholder="********"
-          />
-        </div>
-
-        <Button class="w-full">
-          Sign In
+  <div class="min-h-screen flex items-center justify-center">
+    <Dialog v-model:open="open">
+      <DialogTrigger as-child>
+        <Button>
+          Open Dialog
         </Button>
-      </CardContent>
-    </Card>
+      </DialogTrigger>
+
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle>
+            Ticketing App
+          </DialogTitle>
+
+          <DialogDescription>
+            Dialog berhasil di-render.
+          </DialogDescription>
+        </DialogHeader>
+
+        <DialogFooter>
+          <Button @click="open = false">
+            Close
+          </Button>
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
   </div>
 </template>
