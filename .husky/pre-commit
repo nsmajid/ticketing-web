@@ -1,5 +1,16 @@
 #!/usr/bin/env sh
 
-echo "✔ Husky is working"
+echo "🔍 Running lint-staged in Docker..."
 
-exit 0
+docker compose exec -T frontend pnpm lint-staged
+
+RESULT=$?
+
+if [ $RESULT -ne 0 ]; then
+  echo ""
+  echo "❌ Commit aborted."
+  exit $RESULT
+fi
+
+echo ""
+echo "✅ Code quality check passed."
