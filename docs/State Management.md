@@ -114,10 +114,10 @@ Data tetap berada di memory browser sampai diubah atau halaman ditutup.
 
 Project menggunakan tiga jenis state.
 
-| Jenis | Scope |
-|---------|--------|
-| Local State | Satu Component |
-| Module State | Satu Module |
+| Jenis        | Scope            |
+| ------------ | ---------------- |
+| Local State  | Satu Component   |
+| Module State | Satu Module      |
 | Global State | Seluruh Aplikasi |
 
 ---

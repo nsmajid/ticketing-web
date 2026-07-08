@@ -1,5 +1,3 @@
 import { BaseService } from '@/services/base/base.service'
 
-export class TicketService extends BaseService {
-
-}
+export class TicketService extends BaseService {}

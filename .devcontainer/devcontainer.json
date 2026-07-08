@@ -1,24 +1,24 @@
 {
-    "name": "Ticketing Web",
+  "name": "Ticketing Web",
 
-    "dockerComposeFile": "../compose.yaml",
+  "dockerComposeFile": "../compose.yaml",
 
-    "service": "frontend",
+  "service": "frontend",
 
-    "workspaceFolder": "/app",
+  "workspaceFolder": "/app",
 
-    "shutdownAction": "stopCompose",
+  "shutdownAction": "stopCompose",
 
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "Vue.volar",
-                "Vue.vscode-typescript-vue-plugin",
-                "dbaeumer.vscode-eslint",
-                "esbenp.prettier-vscode",
-                "bradlc.vscode-tailwindcss",
-                "eamodio.gitlens"
-            ]
-        }
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Vue.volar",
+        "Vue.vscode-typescript-vue-plugin",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss",
+        "eamodio.gitlens"
+      ]
     }
+  }
 }

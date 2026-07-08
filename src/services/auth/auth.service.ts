@@ -1,5 +1,3 @@
 import { BaseService } from '@/services/base/base.service'
 
-export class AuthService extends BaseService {
-
-}
+export class AuthService extends BaseService {}

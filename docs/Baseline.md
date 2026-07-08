@@ -25,22 +25,22 @@ Project ini mengikuti pendekatan:
 
 # Tech Stack
 
-| Layer | Technology |
-|---------|------------|
-| Framework | Vue 3.5 |
-| Language | TypeScript |
-| Build Tool | Vite 8 |
-| Runtime | Node 22 Alpine |
-| Package Manager | PNPM 11 |
-| Styling | TailwindCSS v4 |
-| UI Library | shadcn-vue |
-| Primitive Components | Reka UI |
-| Icons | @lucide/vue |
-| State Management | Pinia |
-| Routing | Vue Router |
-| HTTP Client | Axios |
-| Form Validation | VeeValidate + Zod *(planned)* |
-| Date Utility | date-fns *(planned)* |
+| Layer                | Technology                    |
+| -------------------- | ----------------------------- |
+| Framework            | Vue 3.5                       |
+| Language             | TypeScript                    |
+| Build Tool           | Vite 8                        |
+| Runtime              | Node 22 Alpine                |
+| Package Manager      | PNPM 11                       |
+| Styling              | TailwindCSS v4                |
+| UI Library           | shadcn-vue                    |
+| Primitive Components | Reka UI                       |
+| Icons                | @lucide/vue                   |
+| State Management     | Pinia                         |
+| Routing              | Vue Router                    |
+| HTTP Client          | Axios                         |
+| Form Validation      | VeeValidate + Zod _(planned)_ |
+| Date Utility         | date-fns _(planned)_          |
 
 ---
 
@@ -204,7 +204,7 @@ Gunakan alias:
 Contoh:
 
 ```ts
-import { Button } from "@/components/ui/button"
+import { Button } from '@/components/ui/button'
 ```
 
 Jangan menggunakan relative path:
