@@ -1,11 +1,9 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import { Ticket } from '@/icons'
 </script>
 
 <template>
-  <HelloWorld />
-  <h1>Hello Ticketing</h1>
-  <div>
-    Docker Volume Test
+  <div class="flex min-h-screen items-center justify-center">
+    <Ticket class="h-12 w-12 text-blue-600" />
   </div>
 </template>
