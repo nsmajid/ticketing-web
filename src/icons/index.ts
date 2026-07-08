@@ -28,4 +28,4 @@ export {
   CircleX,
   LogOut,
   LogIn,
-} from 'lucide-vue-next'
+} from '@lucide/vue'

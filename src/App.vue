@@ -1,9 +1,40 @@
 <script setup lang="ts">
-import { Ticket } from '@/icons'
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/components/ui/tabs";
 </script>
 
 <template>
-  <div class="flex min-h-screen items-center justify-center">
-    <Ticket class="h-12 w-12 text-blue-600" />
+  <div class="p-8">
+    <Tabs default-value="detail">
+      <TabsList>
+        <TabsTrigger value="detail">
+          Detail
+        </TabsTrigger>
+
+        <TabsTrigger value="comment">
+          Comment
+        </TabsTrigger>
+
+        <TabsTrigger value="history">
+          History
+        </TabsTrigger>
+      </TabsList>
+
+      <TabsContent value="detail">
+        Ticket Detail Content
+      </TabsContent>
+
+      <TabsContent value="comment">
+        Ticket Comment Content
+      </TabsContent>
+
+      <TabsContent value="history">
+        Ticket History Content
+      </TabsContent>
+    </Tabs>
   </div>
 </template>
