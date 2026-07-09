@@ -10,7 +10,7 @@ export const dashboardRoutes: RouteRecordRaw[] = [
     name: 'dashboard.index',
     component: () => import('@/pages/dashboard/DashboardPage.vue'),
     meta: {
-      layout: 'dashboard',
+      layout: 'app',
       requiresAuth: true,
       title: 'Dashboard',
     },

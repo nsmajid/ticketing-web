@@ -58,5 +58,6 @@
     "*.{css,scss}": [
       "prettier --write"
     ]
-  }
+  },
+  "license": "UNLICENSED"
 }

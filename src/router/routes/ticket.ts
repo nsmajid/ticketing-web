@@ -6,7 +6,7 @@ export const ticketRoutes: RouteRecordRaw[] = [
     name: 'ticket.index',
     component: () => import('@/pages/tickets/TicketListPage.vue'),
     meta: {
-      layout: 'dashboard',
+      layout: 'app',
       requiresAuth: true,
       title: 'Tickets',
     },
