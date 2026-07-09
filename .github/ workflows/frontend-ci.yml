@@ -4,12 +4,13 @@ on:
   push:
     branches:
       - main
-      - develop
+      - staging
+      - nsmajid
 
   pull_request:
     branches:
       - main
-      - develop
+      - staging
 
 jobs:
   build:
