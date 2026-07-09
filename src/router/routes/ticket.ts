@@ -3,7 +3,7 @@ import type { RouteRecordRaw } from 'vue-router'
 export const ticketRoutes: RouteRecordRaw[] = [
   {
     path: '/tickets',
-    name: 'ticket.index',
+    name: 'tickets.index',
     component: () => import('@/pages/tickets/TicketListPage.vue'),
     meta: {
       layout: 'app',
