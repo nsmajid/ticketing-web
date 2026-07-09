@@ -6,7 +6,7 @@ export const userRoutes: RouteRecordRaw[] = [
     name: 'user.index',
     component: () => import('@/pages/users/UserListPage.vue'),
     meta: {
-      layout: 'dashboard',
+      layout: 'app',
       requiresAuth: true,
       title: 'Users',
     },
