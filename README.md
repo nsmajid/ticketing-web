@@ -204,7 +204,7 @@ Frontend deployment target
 
 CI/CD
 
-GitHub Actions
+GitHub Actions Check
 
 ---
 
