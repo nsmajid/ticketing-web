@@ -5,7 +5,7 @@ on:
     branches:
       - main
       - staging
-      - nsmajid
+      - 'programmer/**'
 
   pull_request:
     branches:
