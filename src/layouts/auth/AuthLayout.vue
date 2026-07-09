@@ -1,9 +1,7 @@
 <template>
-  <main class="flex min-h-screen items-center justify-center bg-muted/30 p-6">
-    <div class="w-full max-w-md">
+  <div class="flex min-h-screen items-center justify-center bg-muted/30">
+    <div class="w-full max-w-md rounded-lg border bg-background p-8 shadow-sm">
       <RouterView />
     </div>
-  </main>
+  </div>
 </template>
-
-<script setup lang="ts"></script>

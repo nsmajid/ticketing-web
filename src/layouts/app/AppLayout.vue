@@ -1,21 +1,22 @@
-<template>
-  <div class="flex min-h-screen">
-    <AppSidebar />
-
-    <div class="flex flex-1 flex-col">
-      <AppHeader />
-
-      <main class="flex-1 p-6">
-        <RouterView />
-      </main>
-
-      <AppFooter />
-    </div>
-  </div>
-</template>
-
 <script setup lang="ts">
-import AppFooter from './AppFooter.vue'
-import AppHeader from './AppHeader.vue'
-import AppSidebar from './AppSidebar.vue'
+import AppShell from './AppShell.vue'
+import AppMain from './components/AppMain.vue'
+import AppNavbar from './components/AppNavbar.vue'
+import AppSidebar from './components/AppSidebar.vue'
+import AppFooter from './components/AppFooter.vue'
 </script>
+
+<template>
+  <AppShell>
+    <AppNavbar />
+    <div class="flex flex-1 overflow-hidden">
+      <AppSidebar />
+
+      <AppMain>
+        <RouterView />
+      </AppMain>
+    </div>
+
+    <AppFooter />
+  </AppShell>
+</template>

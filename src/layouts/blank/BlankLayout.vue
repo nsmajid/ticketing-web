@@ -1,7 +1,3 @@
 <template>
-  <main class="min-h-screen">
-    <RouterView />
-  </main>
+  <RouterView />
 </template>
-
-<script setup lang="ts"></script>
