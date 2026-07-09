@@ -11,7 +11,8 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier . --write",
     "format:check": "prettier . --check",
-    "prepare": "husky"
+    "prepare": "husky",
+    "type-check": "vue-tsc -b"
   },
   "dependencies": {
     "@lucide/vue": "^1.23.0",
