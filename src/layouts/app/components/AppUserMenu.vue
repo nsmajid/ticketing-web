@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { userMenuNavigation } from '@/navigation'
+// import { userMenuNavigation } from '@/navigation'
 </script>
 
 <template>
