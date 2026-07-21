@@ -1,0 +1,634 @@
+/*
+|--------------------------------------------------------------------------
+| Ticketing App Design System v1.0
+|--------------------------------------------------------------------------
+|
+| Frontend Stack
+| - Vue 3
+| - TypeScript
+| - Tailwind CSS v4
+| - shadcn-vue
+|
+| Design Principles
+| - Semantic Design Tokens
+| - GitHub Inspired UI
+| - Light & Dark Theme
+| - CSS Variable Based
+| - Tailwind Compatible
+|
+| Notes
+| - Do NOT use hardcoded colors in components.
+| - Always use semantic tokens.
+| - Example:
+|
+|   ✅ bg-primary
+|   ✅ text-muted-foreground
+|   ✅ border-border
+|
+|   ❌ bg-blue-500
+|   ❌ text-gray-600
+|
+|--------------------------------------------------------------------------
+*/
+
+/* ==========================================================================
+   Light Theme
+   ========================================================================== */
+
+:root {
+  /* ======================================================================
+     * Base
+     * ====================================================================== */
+
+  /**
+     * Application background.
+     */
+  --background: 0 0% 100%;
+
+  /**
+     * Primary text color.
+     */
+  --foreground: 222 47% 11%;
+
+  /* ======================================================================
+     * Surface
+     * ====================================================================== */
+
+  /**
+     * Card background.
+     */
+  --card: 0 0% 100%;
+
+  /**
+     * Card text color.
+     */
+  --card-foreground: 222 47% 11%;
+
+  /**
+     * Popover / Dropdown background.
+     */
+  --popover: 0 0% 100%;
+
+  /**
+     * Popover text color.
+     */
+  --popover-foreground: 222 47% 11%;
+
+  /* ======================================================================
+     * Brand
+     * ====================================================================== */
+
+  /**
+     * Primary brand color.
+     *
+     * Used for:
+     * - Primary Button
+     * - Active Navigation
+     * - Links
+     * - Focus Ring
+     */
+  --primary: 212 92% 45%;
+
+  /**
+     * Text displayed on Primary.
+     */
+  --primary-foreground: 0 0% 100%;
+
+  /**
+     * Secondary background.
+     *
+     * Used for:
+     * - Secondary Button
+     * - Badge
+     * - Toolbar
+     */
+  --secondary: 210 16% 93%;
+
+  /**
+     * Text displayed on Secondary.
+     */
+  --secondary-foreground: 222 47% 11%;
+  /* ======================================================================
+     * Semantic
+     * ====================================================================== */
+
+  /**
+     * Accent background.
+     *
+     * Used for:
+     * - Hover Item
+     * - Selected List
+     * - Active Menu
+     */
+  --accent: 210 40% 96.1%;
+
+  /**
+     * Text displayed on Accent.
+     */
+  --accent-foreground: 222 47% 11%;
+
+  /**
+     * Muted background.
+     *
+     * Used for:
+     * - Disabled State
+     * - Empty State
+     * - Placeholder Area
+     */
+  --muted: 210 40% 96.1%;
+
+  /**
+     * Secondary text.
+     */
+  --muted-foreground: 215 16% 47%;
+
+  /**
+     * Success color.
+     *
+     * Used for:
+     * - Success Badge
+     * - Success Alert
+     * - Completed Status
+     */
+  --success: 142 71% 45%;
+
+  /**
+     * Text displayed on Success.
+     */
+  --success-foreground: 0 0% 100%;
+
+  /**
+     * Warning color.
+     *
+     * Used for:
+     * - Warning Badge
+     * - Waiting Status
+     * - SLA Near Due
+     */
+  --warning: 38 92% 50%;
+
+  /**
+     * Text displayed on Warning.
+     */
+  --warning-foreground: 222 47% 11%;
+
+  /**
+     * Information color.
+     *
+     * Used for:
+     * - Information Alert
+     * - Notice
+     * - Timeline
+     */
+  --info: 199 89% 48%;
+
+  /**
+     * Text displayed on Info.
+     */
+  --info-foreground: 0 0% 100%;
+
+  /**
+     * Destructive color.
+     *
+     * Used for:
+     * - Delete Button
+     * - Error Alert
+     * - Failed Status
+     */
+  --destructive: 0 72% 51%;
+
+  /**
+     * Text displayed on Destructive.
+     */
+  --destructive-foreground: 0 0% 100%;
+  /* ======================================================================
+     * Border & Form
+     * ====================================================================== */
+
+  /**
+     * Default border color.
+     */
+  --border: 214 32% 91%;
+
+  /**
+     * Divider / Separator color.
+     */
+  --separator: 214 32% 94%;
+
+  /**
+     * Input background.
+     */
+  --input: 0 0% 100%;
+
+  /**
+     * Input border.
+     */
+  --input-border: 214 32% 91%;
+
+  /**
+     * Focus Ring.
+     *
+     * Used for:
+     * - Button
+     * - Input
+     * - Select
+     * - Checkbox
+     */
+  --ring: 212 92% 45%;
+
+  /**
+     * Ring Offset.
+     */
+  --ring-offset: 0 0% 100%;
+  /* ======================================================================
+     * State
+     * ====================================================================== */
+
+  /**
+     * Hover opacity.
+     */
+  --state-hover-opacity: 0.08;
+
+  /**
+     * Focus opacity.
+     */
+  --state-focus-opacity: 0.12;
+
+  /**
+     * Pressed opacity.
+     */
+  --state-pressed-opacity: 0.16;
+
+  /**
+     * Disabled opacity.
+     */
+  --state-disabled-opacity: 0.5;
+
+  /**
+     * Overlay opacity.
+     */
+  --state-overlay-opacity: 0.6;
+  /* ======================================================================
+     * Ticket Status
+     * ====================================================================== */
+
+  --status-draft: 220 9% 46%;
+  --status-submitted: 212 92% 45%;
+  --status-reviewed: 262 83% 58%;
+  --status-in-progress: 199 89% 48%;
+  --status-waiting: 38 92% 50%;
+  --status-resolved: 142 71% 45%;
+  --status-closed: 215 16% 47%;
+  --status-cancelled: 0 72% 51%;
+  /* ======================================================================
+     * Typography
+     * ====================================================================== */
+
+  /**
+     * Primary font family.
+     *
+     * UI Components
+     * Form
+     * Table
+     * Dashboard
+     */
+  --font-sans: Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  /**
+     * Monospace font.
+     *
+     * Code
+     * Ticket ID
+     * JSON
+     * SQL
+     */
+  --font-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+
+  /**
+     * Font Weight
+     */
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /**
+     * Font Size
+     */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+
+  /**
+     * Line Height
+     */
+  --leading-tight: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.75;
+  /* ======================================================================
+     * Radius
+     * ====================================================================== */
+
+  /**
+     * Base Radius
+     */
+  --radius: 0.5rem;
+
+  /**
+     * Radius Scale
+     */
+  --radius-xs: calc(var(--radius) - 6px);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-full: 9999px;
+
+  /* ======================================================================
+     * Shadow
+     * ====================================================================== */
+
+  /**
+     * Extra Small
+     */
+  --shadow-xs: 0 1px 2px rgb(0 0 0 / 0.04);
+
+  /**
+     * Small
+     */
+  --shadow-sm: 0 1px 3px rgb(0 0 0 / 0.08);
+
+  /**
+     * Medium
+     */
+  --shadow-md: 0 4px 8px rgb(0 0 0 / 0.1);
+
+  /**
+     * Large
+     */
+  --shadow-lg: 0 8px 20px rgb(0 0 0 / 0.12);
+
+  /**
+     * Extra Large
+     */
+  --shadow-xl: 0 16px 32px rgb(0 0 0 / 0.14);
+
+  /**
+     * Focus Ring Shadow
+     */
+  --shadow-focus: 0 0 0 3px hsl(var(--ring) / 0.25);
+
+  /* ======================================================================
+     * Motion
+     * ====================================================================== */
+
+  /**
+     * Duration
+     */
+  --duration-75: 75ms;
+  --duration-100: 100ms;
+  --duration-150: 150ms;
+  --duration-200: 200ms;
+  --duration-300: 300ms;
+  --duration-500: 500ms;
+
+  /**
+     * Easing
+     */
+  --ease-linear: linear;
+
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /**
+     * Standard Transition
+     */
+  --transition-fast: all var(--duration-150) var(--ease-out);
+
+  --transition-normal: all var(--duration-200) var(--ease-out);
+
+  --transition-slow: all var(--duration-300) var(--ease-in-out);
+
+  /* ======================================================================
+     * Z-Index
+     * ====================================================================== */
+
+  /**
+     * Default Layer
+     */
+  --z-base: 1;
+
+  /**
+     * Sticky Header
+     */
+  --z-sticky: 10;
+
+  /**
+     * Fixed Navigation
+     */
+  --z-fixed: 20;
+
+  /**
+     * Dropdown
+     */
+  --z-dropdown: 30;
+
+  /**
+     * Popover
+     */
+  --z-popover: 40;
+
+  /**
+     * Modal Backdrop
+     */
+  --z-overlay: 50;
+
+  /**
+     * Dialog
+     */
+  --z-modal: 60;
+
+  /**
+     * Toast Notification
+     */
+  --z-toast: 70;
+
+  /**
+     * Tooltip
+     */
+  --z-tooltip: 80;
+
+  /* ==========================================================================
+   Layout
+   ========================================================================== */
+
+  --container-xs: 480px;
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1400px;
+
+  --header-height: 64px;
+  --sidebar-width: 260px;
+  --sidebar-collapsed-width: 72px;
+
+  --content-max-width: 1600px;
+
+  --page-padding-x: 24px;
+  --page-padding-y: 24px;
+
+  --section-gap: 24px;
+  --card-gap: 16px;
+}
+
+/* ==========================================================================
+   Dark Theme
+   ========================================================================== */
+
+.dark {
+  /* ======================================================================
+     * Base
+     * ====================================================================== */
+
+  /**
+     * Application Background
+     */
+  --background: 222 47% 11%;
+
+  /**
+     * Primary Text
+     */
+  --foreground: 210 40% 98%;
+
+  /* ======================================================================
+     * Surface
+     * ====================================================================== */
+
+  /**
+     * Card
+     */
+  --card: 222 40% 14%;
+
+  /**
+     * Card Text
+     */
+  --card-foreground: 210 40% 98%;
+
+  /**
+     * Popover
+     */
+  --popover: 222 40% 14%;
+
+  /**
+     * Popover Text
+     */
+  --popover-foreground: 210 40% 98%;
+
+  /* ======================================================================
+     * Brand
+     * ====================================================================== */
+
+  /**
+     * Primary
+     */
+  --primary: 212 92% 60%;
+
+  /**
+     * Text on Primary
+     */
+  --primary-foreground: 222 47% 11%;
+
+  /**
+     * Secondary
+     */
+  --secondary: 217 33% 18%;
+
+  /**
+     * Text on Secondary
+     */
+  --secondary-foreground: 210 40% 98%;
+
+  /* ======================================================================
+     * Semantic
+     * ====================================================================== */
+
+  --accent: 217 33% 18%;
+  --accent-foreground: 210 40% 98%;
+
+  --muted: 217 33% 18%;
+  --muted-foreground: 215 20% 70%;
+
+  --success: 142 70% 45%;
+  --success-foreground: 210 40% 98%;
+
+  --warning: 38 95% 55%;
+  --warning-foreground: 222 47% 11%;
+
+  --info: 199 90% 60%;
+  --info-foreground: 222 47% 11%;
+
+  --destructive: 0 70% 55%;
+  --destructive-foreground: 210 40% 98%;
+
+  /* ======================================================================
+     * Border & Form
+     * ====================================================================== */
+
+  --border: 217 28% 22%;
+
+  --separator: 217 28% 18%;
+
+  --input: 222 40% 14%;
+
+  --input-border: 217 28% 22%;
+
+  --ring: 212 92% 60%;
+
+  --ring-offset: 222 47% 11%;
+
+  /* ======================================================================
+     * Ticket Status
+     * ====================================================================== */
+
+  --status-draft: 215 15% 70%;
+
+  --status-submitted: 212 92% 60%;
+
+  --status-reviewed: 262 83% 68%;
+
+  --status-in-progress: 199 90% 60%;
+
+  --status-waiting: 38 95% 55%;
+
+  --status-resolved: 142 70% 45%;
+
+  --status-closed: 215 18% 55%;
+
+  --status-cancelled: 0 70% 55%;
+
+  /* ======================================================================
+     * Shadow
+     * ====================================================================== */
+
+  --shadow-xs: 0 1px 2px rgb(0 0 0 / 0.35);
+
+  --shadow-sm: 0 2px 4px rgb(0 0 0 / 0.4);
+
+  --shadow-md: 0 6px 12px rgb(0 0 0 / 0.45);
+
+  --shadow-lg: 0 12px 24px rgb(0 0 0 / 0.5);
+
+  --shadow-xl: 0 20px 40px rgb(0 0 0 / 0.55);
+
+  --shadow-focus: 0 0 0 3px hsl(var(--ring) / 0.35);
+}
