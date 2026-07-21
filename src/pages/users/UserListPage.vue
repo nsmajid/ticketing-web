@@ -1,7 +1,30 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import {
+  PageBody,
+  PageContainer,
+  PageDescription,
+  PageHeader,
+  PageTitle,
+} from '@/components/layout'
+</script>
+
 <template>
-  <div class="space-y-2">
-    <h1 class="text-3xl font-bold">Users</h1>
-    <p class="text-muted-foreground">User Management</p>
-  </div>
+  <PageContainer>
+    <PageHeader>
+      <div>
+        <PageTitle> Users </PageTitle>
+
+        <PageDescription> Manage system users. </PageDescription>
+      </div>
+
+      <template #actions>
+        <!-- Create Button -->
+        <PrimaryButton> Create User </PrimaryButton>
+      </template>
+    </PageHeader>
+
+    <PageBody>
+      <UserTable />
+    </PageBody>
+  </PageContainer>
 </template>
