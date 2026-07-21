@@ -1,4 +1,4 @@
-import { LayoutDashboard, Ticket, Users, Settings, LogOut } from '@lucide/vue'
+import { navigationIcons } from '@/icons'
 
 import type { NavigationGroup } from '../types'
 
@@ -12,8 +12,7 @@ export const sidebarNavigation: NavigationGroup[] = [
 
         label: 'Dashboard',
 
-        icon: LayoutDashboard,
-
+        icon: navigationIcons.dashboard,
         to: {
           name: 'dashboard.index',
         },
@@ -24,7 +23,7 @@ export const sidebarNavigation: NavigationGroup[] = [
 
         label: 'Tickets',
 
-        icon: Ticket,
+        icon: navigationIcons.ticket,
 
         to: {
           name: 'tickets.index',
@@ -36,7 +35,7 @@ export const sidebarNavigation: NavigationGroup[] = [
 
         label: 'Users',
 
-        icon: Users,
+        icon: navigationIcons.users,
 
         to: {
           name: 'users.index',
@@ -56,7 +55,7 @@ export const sidebarNavigation: NavigationGroup[] = [
 
         label: 'Settings',
 
-        icon: Settings,
+        icon: navigationIcons.settings,
 
         to: {
           name: 'settings.index',
@@ -69,7 +68,7 @@ export const sidebarNavigation: NavigationGroup[] = [
 
         label: 'Logout',
 
-        icon: LogOut,
+        icon: navigationIcons.logout,
 
         action: 'logout',
       },

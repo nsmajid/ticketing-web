@@ -1,31 +1,19 @@
-export {
-  Search,
-  User,
-  Users,
-  Bell,
-  House,
-  LayoutDashboard,
-  Ticket,
-  MessageSquare,
-  ClipboardList,
-  Settings,
-  CircleHelp,
-  ChevronDown,
-  ChevronLeft,
-  ChevronRight,
-  Menu,
-  X,
-  Plus,
-  Pencil,
-  Trash2,
-  Eye,
-  EyeOff,
-  LoaderCircle,
-  RefreshCw,
-  Check,
-  CircleCheck,
-  CircleAlert,
-  CircleX,
-  LogOut,
-  LogIn,
-} from '@lucide/vue'
+/**
+ * Components
+ */
+export { default as AppIcon } from './components/AppIcon.vue'
+
+/**
+ * Registry
+ */
+export * from './registry'
+
+/**
+ * Constants
+ */
+export * from './constants'
+
+/**
+ * Types
+ */
+export type * from './types'
