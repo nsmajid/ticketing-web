@@ -17,6 +17,7 @@
   "dependencies": {
     "@lucide/vue": "^1.23.0",
     "@tailwindcss/vite": "^4.3.2",
+    "@tanstack/vue-query": "^5.101.4",
     "@tanstack/vue-table": "^8.21.3",
     "@vueuse/core": "^14.3.0",
     "axios": "^1.18.1",
@@ -32,6 +33,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@tanstack/vue-query-devtools": "^6.1.38",
     "@types/node": "^24.13.2",
     "@vitejs/plugin-vue": "^6.0.7",
     "@vue/tsconfig": "^0.9.1",
