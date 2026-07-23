@@ -24,3 +24,7 @@ export const LOCAL_STORAGE_KEY = {
 export const SESSION_STORAGE_KEY = {
   REDIRECT_URL: 'redirect_url',
 } as const
+
+export const STORAGE_KEYS = {
+  ACCESS_TOKEN: 'access_token',
+} as const
